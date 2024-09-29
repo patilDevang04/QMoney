@@ -41,27 +41,14 @@ public class PortfolioManagerImpl implements PortfolioManager {
     return Comparator.comparing(AnnualizedReturn::getAnnualizedReturn).reversed();
   }
 
-  // CHECKSTYLE:OFF
-
-  // private String getToken() {
-  // return "3a9bb71bc48d9077662424550e62c72a7b1ce2cd";
-  // }
+  
 
   public List<Candle> getStockQuote(String symbol, LocalDate from, LocalDate to)
       throws StockQuoteServiceException {
-    // String tiingoRestURL = buildUri(symbol, from, to);
-    // TiingoCandle[] tiingoCandleArray =
-    // restTemplate.getForObject(tiingoRestURL, TiingoCandle[].class);
-    // if (tiingoCandleArray == null)
-    // return new ArrayList<>();
-    // return Arrays.stream(tiingoCandleArray).collect(Collectors.toList());
     return stockQuotesService.getStockQuote(symbol, from, to);
   }
 
-  // protected String buildUri(String symbol, LocalDate startDate, LocalDate endDate) {
-  // return "https://api.tiingo.com/tiingo/daily/" + symbol + "/prices?startDate=" + startDate
-  // + "&endDate=" + endDate + "&token=" + getToken();
-  // }
+  
 
   private Double getOpeningPriceOnStartDate(List<Candle> candles) {
     return candles.get(0).getOpen();

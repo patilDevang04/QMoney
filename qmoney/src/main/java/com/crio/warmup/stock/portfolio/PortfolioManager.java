@@ -14,7 +14,7 @@ public interface PortfolioManager {
       LocalDate endDate, int numThreads) throws InterruptedException,
       StockQuoteServiceException;
 
-  //CHECKSTYLE:OFF
+ 
 
 
   List<AnnualizedReturn> calculateAnnualizedReturn(List<PortfolioTrade> portfolioTrades,

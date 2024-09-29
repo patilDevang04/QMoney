@@ -28,9 +28,7 @@ import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 
-/*
-This class is supposed to be used by assessments only.
- */
+
 @ExtendWith(MockitoExtension.class)
 class PortfolioManagerPerformanceTest {
 
